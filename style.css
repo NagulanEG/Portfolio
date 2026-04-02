@@ -52,6 +52,8 @@ p {
     font-weight: 600;
     color: white;
     background-color: black;
+    padding: 0 10px; /* Added slight padding so text doesn't touch the edge of the black background */
+    border-radius: 8px; /* Added slight rounding to match your theme */
 }
 
 .hero span {
@@ -72,6 +74,11 @@ p {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    transition: background 0.3s ease; /* Added a smooth hover transition */
+}
+
+.btn:hover {
+    background: #1d4ed8; /* Added a hover effect for better UX */
 }
 
 .btn.secondary {
@@ -85,14 +92,23 @@ p {
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.06);
     margin-bottom: 32px;
-    background-color: white;
+}
+
+/* Ensure links inside cards look clean */
+.card a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 24px;
-    background-color: white;
+    background-color: transparent; /* Removed white background from the grid container to let cards pop */
 }
 
 footer {
@@ -100,11 +116,9 @@ footer {
     padding: 40px;
     background: #111827;
     color: #9ca3af;
-
 }
 
 @media (max-width: 768px) {
-
     section {
         padding: 40px 6%;
     }
@@ -139,4 +153,3 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
